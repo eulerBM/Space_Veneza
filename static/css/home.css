@@ -1,0 +1,49 @@
+#body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(132, 0, 255) 50%, rgba(2,0,36,1) 100%);
+}
+#titulo_page {
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(128, 0, 255), steelblue, rgb(0, 0, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+#titulo_page:active {
+    transform: translateY(2px);
+}
+#foto {
+    max-width: 100%;
+    height: 200px; 
+}
+#foto:hover {
+    transform: scale(1.05);
+}
+.card {
+    width: 22.5rem;
+}
+#titulo_card {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-weight: bold;
+    font-size: x-large;
+}
+#titulo_card:hover {
+    font-size: 130%; 
+}
+.col {
+    padding-top: 10px;
+}
+@media only screen and (max-device-width: 991px) {
+    .card {
+        margin: 0 auto;
+        width: fit-content;
+       
+       
+    }
+    #foto {
+        max-width: 100%;
+        height: 200px; 
+    }
+      
+    }
