@@ -1,12 +1,18 @@
 from django.shortcuts import render
 from home.models import noticia
+from django.core.paginator import Paginator
 
 def home(request):
 
-    noti = noticia.objects.order_by('-date')[:10]
+    noti = noticia.objects.order_by('-date')
+
+    paginator = Paginator(noti, 1)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
 
     context = {
         'noticias': noti,
+        "page_obj": page,
              
     }
 
